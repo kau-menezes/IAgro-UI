@@ -4,7 +4,16 @@
 :root {
     --josefin: 'Josefin Sans', sans-serif;
     --almost-black: #252525;
+    --main-green: #52A260;
+    --light-green: #D4F4D8;
     
+}
+
+@theme inline
+{
+    --almostBlack: var(--almost-black);
+    --mainGreen: var(--main-green);
+    --lightGreen: var(--light-green);
 }
 
 body {
