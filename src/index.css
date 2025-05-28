@@ -4,8 +4,12 @@
 :root {
     --josefin: 'Josefin Sans', sans-serif;
     --almost-black: #252525;
+    --main-gray: #949494;
+    --darker-gray: #868686;
     --main-green: #52A260;
     --light-green: #D4F4D8;
+    --main-white: #FBFBFB;
+    --pure-white: #ffffff;
     
 }
 
@@ -14,6 +18,10 @@
     --almostBlack: var(--almost-black);
     --mainGreen: var(--main-green);
     --lightGreen: var(--light-green);
+    --mainGray: var(--main-gray);
+    --darkerGray: var(--darker-gray);
+    --mainWhite: var(--main-white);
+    --pureWhite: var(--pure-white);
 }
 
 body {
