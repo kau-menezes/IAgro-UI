@@ -22,7 +22,7 @@ export function AppShell() {
   return (
     <div className="flex h-screen flex-col font-josefin">
       <header className="h-[60px]  gap-1 flex p-3 items-center text-2xl font-bold bg-white  border-b-1 border-b-gray-300"> 
-        <img src="assets/icons/green-logo.png" alt="" className='h-10 ml-2' />
+        <img src="/icons/green-logo.png" alt="" className='h-10 ml-2' />
         <h3 className='font-josefin self-end text-center text-(--almostBlack)'>IAgro</h3>
       </header> 
       <div className="min-h-[90%] flex">
