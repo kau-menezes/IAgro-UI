@@ -1,5 +1,4 @@
-import { Group, Title, type GroupProps } from "@mantine/core";
-import { IconStack3 } from "@tabler/icons-react";
+import { Group, Image, Title, type GroupProps } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import { AppRoutes } from "../../../constants/app-routes";
 import { AppLink } from "../app-link";
@@ -20,14 +19,10 @@ export function Logo({
 
     const Logo = (
         <Group color="cyan" gap={4} {...groupProps}>
-            <IconStack3 size={sizeOptions[size]} color="#52A260"/>
+            <Image src="/icons/colorful-logo-iagro.png" h={sizeOptions[size]} w={sizeOptions[size]} fit="contain"/>
+            
             {bigScreen &&
-                <Title 
-                    c="#52A260"
-                    order={1} 
-                    ta="center" 
-                    fz={sizeOptions[size]}
-                >IAgro</Title>
+                <Title c="#52A260" fz={sizeOptions[size]}>IAgro</Title>
             }
         </Group>
     )
