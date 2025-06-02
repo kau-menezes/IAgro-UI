@@ -7,7 +7,7 @@ import { Notifier } from './components/feedback/notifier';
 
 export function App() {
     return(
-        <MantineProvider defaultColorScheme="dark">
+        <MantineProvider>
             <UserContextProvider>
                 <Outlet/>
                 <Notifier/>
