@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
-@import "tailwindcss";
 
 :root {
     --josefin: 'Josefin Sans', sans-serif;
@@ -10,21 +9,8 @@
     --light-green: #D4F4D8;
     --main-white: #FBFBFB;
     --pure-white: #ffffff;
-    
-}
-
-@theme inline
-{
-    --almostBlack: var(--almost-black);
-    --mainGreen: var(--main-green);
-    --lightGreen: var(--light-green);
-    --mainGray: var(--main-gray);
-    --darkerGray: var(--darker-gray);
-    --mainWhite: var(--main-white);
-    --pureWhite: var(--pure-white);
 }
 
 body {
-    font-family: var(--josefin);
-
+    font-family: var(--josefin) !important;
 }
