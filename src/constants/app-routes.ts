@@ -2,5 +2,7 @@ export const AppRoutes = {
     ROOT: "/",
     LOGIN: "/login",
 
-    HOME: "/home",
+    DASHBOARD: "/dashboard",
+    FIELDS: "/fields",
+    PROFILE: "/profile",
 } as const;
