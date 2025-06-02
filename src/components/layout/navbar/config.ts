@@ -1,11 +1,21 @@
-import { IconHome } from "@tabler/icons-react";
+import { IconLayoutDashboard, IconLeaf, IconUser } from "@tabler/icons-react";
 import type { INavbarItemProps } from "./item";
 import { AppRoutes } from "../../../constants/app-routes";
 
 export const navbarItems: INavbarItemProps[] = [
     {
-        title: "Home",
+        title: "Dashboard",
         link: AppRoutes.DASHBOARD,
-        Icon: IconHome,
+        Icon: IconLayoutDashboard,
+    },
+    {
+        title: "My Fields",
+        link: AppRoutes.FIELDS,
+        Icon: IconLeaf,
+    },
+    {
+        title: "My Profile",
+        link: AppRoutes.PROFILE,
+        Icon: IconUser,
     },
 ];
