@@ -1,16 +1,1 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
-
-:root {
-    --josefin: 'Josefin Sans', sans-serif;
-    --almost-black: #252525;
-    --main-gray: #949494;
-    --darker-gray: #868686;
-    --main-green: #52A260;
-    --light-green: #D4F4D8;
-    --main-white: #FBFBFB;
-    --pure-white: #ffffff;
-}
-
-body {
-    font-family: var(--josefin) !important;
-}
