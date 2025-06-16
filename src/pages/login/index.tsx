@@ -8,7 +8,7 @@ import { jwtDecode } from "jwt-decode";
 import type { User } from "../../types/users.types";
 import { AppRoutes } from "../../constants/app-routes";
 import { useForm } from '@mantine/form';
-import { Button, Center, Container, Flex, LoadingOverlay, rem, Text, TextInput } from "@mantine/core";
+import { Button, Center, Container, Flex, LoadingOverlay, PasswordInput, rem, Text, TextInput } from "@mantine/core";
 import { Logo } from "../../components/utils/logo";
 import { IconAt, IconLock } from "@tabler/icons-react";
 import { notify } from "../../components/feedback/notifier/functions";
@@ -61,11 +61,10 @@ export function Login() {
                             required
                         />
 
-                        <TextInput
+                        <PasswordInput
                             key={key("password")}
                             {...getInputProps("password")}
                             label="Password"
-                            type="password"
                             leftSection={<IconLock/>}
                             required
                         />
