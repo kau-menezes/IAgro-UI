@@ -13,25 +13,20 @@ export const router = createBrowserRouter([{
     Component: App,
     children: [
         {
-            // Redirect to root when path not found
             path: "*",
             Component: Root
         },
         {
-            // Root is not implemented, so it just redirects to dashboard
             path: AppRoutes.ROOT,
             Component: Root
         },
         {
-            // Login page is open, without guards
             path: AppRoutes.LOGIN,
             Component: Login,
         },
         {
-            // Component without path => layout
             Component: AppLayout,
             children: [{
-                // Guard for authenticated routes
                 Component: AuthenticationGuard,
                 children: [
                     {
