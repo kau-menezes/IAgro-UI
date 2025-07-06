@@ -7,7 +7,8 @@ import { App } from "../App.tsx";
 import { AuthenticationGuard } from "../components/guards/authentication/index.tsx";
 import { Dashboard } from "../pages/dashboard/index.tsx";
 import { Fields } from "../pages/fields/index.tsx";
-import { Profile } from "../pages/profile/index.tsx";
+import { Account } from "../pages/account/index.tsx";
+import { AnalyzeField } from "../pages/analyze-field/index.tsx";
 
 export const router = createBrowserRouter([{
     Component: App,
@@ -38,9 +39,13 @@ export const router = createBrowserRouter([{
                         Component: Fields,
                     },
                     {
-                        path: AppRoutes.PROFILE,
-                        Component: Profile,
-                    }
+                        path: AppRoutes.ACCOUNT,
+                        Component: Account,
+                    },
+                    {
+                        path: AppRoutes.ANALYZE_FIELD(),
+                        Component: AnalyzeField,
+                    },
                 ]
             }]
         },

@@ -5,11 +5,13 @@ import { api } from "../../services/api.service";
 import { UserContext } from "../../contexts/user.context";
 import { CreateField } from "./components/create-field";
 import { FieldCard } from "./components/field-card";
+import { useDisclosure } from "@mantine/hooks";
 
 export function Fields() {
 
     const { user } = useContext(UserContext);
     const [fields, setFields] = useState<Field[]>([]);
+    const [opened, { open, close }] = useDisclosure(false);
 
     useEffect(() => {
         if(user) {
@@ -18,14 +20,12 @@ export function Fields() {
         }
     }, [user]);
 
-    console.log(fields)
-
     return (
         <Stack gap={2}>
             <Box>
                 <Group>
                     <Title fw={400}>My Fields</Title>
-                    <CreateField/>
+                    <CreateField opened={opened} open={open} close={close}/>
                 </Group>
                 <Text fz={rem(20)} c={"gray"}>Manage and monitor your crop fields</Text>
             </Box>
@@ -33,7 +33,7 @@ export function Fields() {
             <Grid>
                 {fields.map(field => (
                     <Grid.Col key={field.id} span={{ sm: 12, xl: 6 }}>
-                        <FieldCard field={field}/>
+                        <FieldCard field={field} hideMap={opened}/>
                     </Grid.Col>
                 ))}
             </Grid>

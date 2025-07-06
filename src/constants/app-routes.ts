@@ -4,5 +4,6 @@ export const AppRoutes = {
 
     DASHBOARD: "/dashboard",
     FIELDS: "/fields",
-    PROFILE: "/profile",
+    ACCOUNT: "/account",
+    ANALYZE_FIELD: (fieldId: string = ":fieldId") => `/analyze-field/${fieldId}`
 } as const;

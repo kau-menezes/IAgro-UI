@@ -15,7 +15,7 @@ export const navbarItems: INavbarItemProps[] = [
     },
     {
         title: "My Profile",
-        link: AppRoutes.PROFILE,
+        link: AppRoutes.ACCOUNT,
         Icon: IconUser,
     },
 ];

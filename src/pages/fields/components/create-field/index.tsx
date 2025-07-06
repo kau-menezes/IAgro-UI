@@ -1,6 +1,5 @@
 import { ActionIcon, Button, Modal, Stack, TextInput } from "@mantine/core";
 import { useForm } from "@mantine/form";
-import { useDisclosure } from "@mantine/hooks";
 import { IconPlus } from "@tabler/icons-react";
 import type { FieldCreation } from "../../../../types/fields.types";
 import { useContext } from "react";
@@ -9,10 +8,15 @@ import { CreateFieldMap } from "../create-field-map";
 import { calculatePolygonAreaInAcres } from "../../../../utils/acres.utils";
 import { api } from "../../../../services/api.service";
 
-export function CreateField() {
+export interface CreateFieldProps {
+    opened: boolean;
+    open: () => void;
+    close: () => void;
+}
+
+export function CreateField({ opened, open, close }: CreateFieldProps) {
 
     const { user } = useContext(UserContext);
-    const [opened, { open, close }] = useDisclosure(false);
     const {
         key, 
         onSubmit, 
