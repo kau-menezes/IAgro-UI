@@ -29,10 +29,10 @@ export function Login() {
             
             localStorage.setItem(StorageKeys.TOKEN, token);
             const { sub } = jwtDecode(token);
-            const user = await api.get<User>("/users/" + sub);
+            const { data: user} = await api.get<User>("/users/" + sub);
 
-            updateUser(user.data);
-            navigate(AppRoutes.ROOT);
+            updateUser(user);
+            navigate(user.role == "Admin" ? AppRoutes.ACCOUNT : AppRoutes.DASHBOARD);
         } catch (error) {
             notify.error(String(error))
         } finally {

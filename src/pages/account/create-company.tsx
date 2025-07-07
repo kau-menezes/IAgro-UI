@@ -22,7 +22,7 @@ export function CreateCompany() {
     });
 
     const submit = async (company: CompanyCreation) => {
-        await api.post("/company", company);
+        await api.post("/companies", company);
         reset();
         close();
     }

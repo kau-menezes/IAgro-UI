@@ -99,6 +99,18 @@ export function Account() {
                                                 <Text fz={rem(20)} fw={700}>{u.email}</Text>
                                             </Group>
                                         </Grid.Col>
+                                        <Grid.Col span={{ sm: 12, md: 6 }}>
+                                            <Group>
+                                                <Text fz={rem(20)}>Company:</Text>
+                                                <Badge size="xl">{u.company.name}</Badge>
+                                            </Group>
+                                        </Grid.Col>
+                                        <Grid.Col span={{ sm: 12, md: 6 }}>
+                                            <Group>
+                                                <Text fz={rem(20)}>Country:</Text>
+                                                <Text fz={rem(20)} fw={700}>{u.company.country}</Text>
+                                            </Group>
+                                        </Grid.Col>
                                     </Grid>
                                     <Divider />
                                 </>
