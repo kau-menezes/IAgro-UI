@@ -31,9 +31,9 @@ export function Dashboard() {
 
     useEffect(() => {
         if(user) {
-            api.get<CompanyInsights>(`/companies/${user.companyId}/insights`)
+            api.get<CompanyInsights>(`/companies/${user.company.id}/insights`)
                 .then(({ data }) => setInsights(data));
-            api.get<LastScan[]>(`/fields/company/${user.companyId}/lastScan`)
+            api.get<LastScan[]>(`/fields/company/${user.company.id}/lastScan`)
                 .then(({ data }) => setLastScan(data[0]));
         }
     }, [user])

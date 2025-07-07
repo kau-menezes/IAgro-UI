@@ -29,7 +29,7 @@ export function CreateField({ opened, open, close }: CreateFieldProps) {
 
     const submit = async (form: Omit<FieldCreation, "area" | "companyId">) => {
         const fieldCreation: FieldCreation = {
-            ...form, companyId: user!.companyId,
+            ...form, companyId: user!.company.id,
             area: calculatePolygonAreaInAcres(form.locationPoints),
         }
         await api.post("/fields", fieldCreation);

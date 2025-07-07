@@ -15,7 +15,7 @@ export function Fields() {
 
     useEffect(() => {
         if(user) {
-            api.get<Field[]>("/fields/company/" + user.companyId)
+            api.get<Field[]>("/fields/company/" + user.company.id)
                 .then(res => setFields(res.data));
         }
     }, [user]);
